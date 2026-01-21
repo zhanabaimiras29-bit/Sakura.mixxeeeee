@@ -185,11 +185,17 @@ index cards */
 
 .navmenu {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 14px; /* ← расстояние между пунктами */
-  margin: 0;
+  flex-wrap: nowrap;      /* ❗ НЕ переносим */
+  overflow-x: auto;       /* 👉 скролл */
+  gap: 10px;
+  justify-content: flex-start;
+  -webkit-overflow-scrolling: touch;
 }
+
+.navmenu::-webkit-scrollbar {
+  display: none;
+}
+
 
 .navmenu a {
   padding: 8px 14px;
@@ -625,9 +631,15 @@ footer {
     flex-wrap: wrap;
   }
 
+   .nav-indicator {
+    bottom: 0;
+    margin-top: 0;
+  }
+   
   .nav {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
   }
 }
+
