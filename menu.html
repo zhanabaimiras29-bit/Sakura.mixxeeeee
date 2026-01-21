@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SAKURA.MIX menu</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="log_div">
+       <img class="logo" src="./imges/Sakura.mixx_logo-removebg-preview.png" alt="">
+      <a class="brand" href="index.html">Sakura.mixx</a>
+        </div>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="menu.html" class="active">Меню</a>
+        <a href="about.html">О нас</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="controls">
+        <div class="theme-toggle"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap main">
+    <div class="menu_nav">
+    <h2 class="menuh2">Меню</h2>
+      <div class="navmenu">
+        <a class="nav_a" href="#rolls-section">Холодные роллы</a>
+        <a class="nav_a" href="#frollss-section"> Жаренные роллы</a>
+        <a class="nav_a" href="#bakedrollss-section"> Запеченные роллы</a>
+        <a class="nav_a" href="#pizza-section">Пицца</a>
+        <a class="nav_a" href="#snacks-section">Закуски</a>
+        <a class="nav_a" href="#drinks-section">Напитки</a>
+        <a class="nav_a" href="#sets-section">Сеты</a>
+        <a class="nav_a" href="#dop-section">Допы</a>
+      </div>
+      </div>
+
+
+    <section id="rolls-section">
+      <h3 class="menuh3">Холодные роллы</h3>
+      <div id="productGrid" class="grid"></div>
+    </section>
+
+
+    <section id="frollss-section">
+      <h3 class="menuh3">Жаренные роллы</h3>
+      <div id="productGrid2" class="grid2"></div>
+    </section>
+
+        <section id="bakedrollss-section">
+      <h3 class="menuh3">Запеченные роллы</h3>
+      <div id="productGrid3" class="grid3"></div>
+    </section>
+
+    <section id="pizza-section">
+      <h3 class="menuh3">Пицца</h3>
+      <div id="productGrid4" class="grid4"></div>
+    </section>
+
+    <section id="snacks-section">
+      <h3 class="menuh3">Закуски</h3>
+      <div id="productGrid5" class="grid5"></div>
+    </section>
+
+    <section id="drinks-section">
+      <h3 class="menuh3">Напитки</h3>
+      <div id="productGrid6" class="grid6"></div>
+    </section>
+
+    <section id="sets-section">
+      <h3 class="menuh3">Сеты</h3>
+      <div id="productGrid7" class="grid7"></div>
+    </section>
+
+    <section id="dop-section">
+      <h3 class="menuh3">Допы</h3>
+      <div id="productGrid8" class="grid8"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 2025 Sakura.mixx — суши и пицца рядом.</p>
+    </div>
+  </footer>
+
+  <script src="./java.js"></script>
+  <!-- Floating cart button -->
+<button id="floatingCartBtn" class="floating-cart">
+  🛒 <span id="cartCount">0</span>
+</button>
+<aside id="cartPanel" class="cart-panel">
+  <div class="cart-head">
+    <h3>Корзина</h3>
+    <button id="closeCart" class="icon-btn">✕</button>
+  </div>
+
+  <div id="cartList" class="cart-list"></div>
+
+  <div class="cart-actions">
+    <div class="total">
+      Итого: <strong id="cartTotal">0</strong> ₸
+    </div>
+<label class="radio">
+  <input type="radio" name="pay" value="Наличные" checked>
+  Наличные
+</label>
+
+<label class="radio">
+  <input type="radio" name="pay" value="Kaspi QR">
+  Kaspi
+</label>
+
+<label class="radio">
+  <input type="radio" name="pay" value="Перевод на карту">
+  Карта
+</label>
+
+    <div class="cart-buttons">
+      <button id="clearCart" class="btn">Очистить</button>
+      <button id="checkout" class="btn primary">Оформить в WhatsApp</button>
+    </div>
+  </div>
+</aside>
+</body>
+</html>

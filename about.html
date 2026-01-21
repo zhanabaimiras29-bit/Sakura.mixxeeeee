@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SAKURA.MIX</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="log_div">
+       <img class="logo" src="./imges/Sakura.mixx_logo-removebg-preview.png" alt="">
+      <a class="brand" href="index.html">Sakura.mixx</a>
+        </div>
+
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="menu.html">Меню</a>
+        <a href="about.html">О нас</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+<div class="theme-toggle"></div>
+
+    </div>
+  </header>
+<main class="wrap main">
+
+  <!-- О нас -->
+  <section class="hero">
+    <h1>О нас</h1>
+    <p class="muted">
+      SAKURA.MIX — это свежие суши и пицца, приготовленные с любовью и вниманием к деталям.
+    </p>
+  </section>
+
+  <!-- История -->
+  <section class="features">
+    <article class="artcard">
+      <h3>Кто мы</h3>
+      <p>
+        Мы — команда, которая делает ставку на качество, вкус и честные порции.
+        Готовим только из свежих ингредиентов и работаем для вашего удовольствия.
+      </p>
+    </article>
+
+    <article class="artcard">
+      <h3>Наша миссия</h3>
+      <p>
+        Делать вкусную еду доступной каждому.
+        Быстро, аккуратно и без компромиссов по качеству.
+      </p>
+    </article>
+
+    <article class="artcard">
+      <h3>Почему выбирают нас</h3>
+      <p>
+        • Свежие продукты<br>
+        • Большие сеты<br>
+        • Быстрое оформление заказа<br>
+        • Удобный заказ через WhatsApp
+      </p>
+    </article>
+  </section>
+
+  <!-- Призыв -->
+  <section class="hero" style="margin-top:40px">
+    <h2>Готовы попробовать?</h2>
+    <p>
+      <a class="btn" href="menu.html">Перейти в меню</a>
+    </p>
+  </section>
+
+</main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 2025 Sakura.mixx — суши и пицца рядом. Тел: +7 700 000 0000</p>
+    </div>
+  </footer>
+
+  <script src="./java.js"></script>
+  <button id="floatingCartBtn" class="floating-cart">
+  🛒 <span id="cartCount">0</span>
+</button>
+<aside id="cartPanel" class="cart-panel">
+  <div class="cart-head">
+    <h3>Корзина</h3>
+    <button id="closeCart" class="icon-btn">✕</button>
+  </div>
+
+  <div id="cartList" class="cart-list"></div>
+
+  <div class="cart-actions">
+    <div class="total">
+      Итого: <strong id="cartTotal">0</strong> ₸
+    </div>
+
+    <div class="cart-buttons">
+      <button id="clearCart" class="btn">Очистить</button>
+      <button id="checkout" class="btn primary">Оформить в WhatsApp</button>
+    </div>
+  </div>
+</aside>
+</body>
+</html>

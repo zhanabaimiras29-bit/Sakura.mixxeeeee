@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SAKURA.MIX</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="log_div">
+       <img class="logo" src="./imges/Sakura.mixx_logo-removebg-preview.png" alt="">
+      <a class="brand" href="index.html">Sakura.mixx</a>
+        </div>
+
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="menu.html">Меню</a>
+        <a href="about.html" class="active">О нас</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+<div class="theme-toggle"></div>
+
+    </div>
+  </header>
+
+<main class="wrap main">
+
+  <!-- Контакты -->
+  <section class="hero">
+    <h1>Контакты</h1>
+    <p class="muted">
+      Свяжитесь с нами удобным для вас способом
+    </p>
+  </section>
+
+  <!-- Контактная информация -->
+  <section class="features">
+
+    <article class="artcard">
+      <h3>Телефон</h3>
+      <p>
+        <a href="tel:+77000000000">+7 700 000 0000</a><br>
+        Принимаем заказы ежедневно
+      </p>
+    </article>
+
+    <article class="artcard">
+      <h3>WhatsApp</h3>
+      <p>
+        Быстрое оформление заказа и вопросы<br>
+        <a class="btn" href="https://wa.me/77000000000" target="_blank">
+          Написать в WhatsApp
+        </a>
+      </p>
+    </article>
+
+    <article class="artcard">
+      <h3>Адрес</h3>
+      <p>
+        г. Алматы<br>
+        ул. Примерная, 12
+      </p>
+    </article>
+
+    <article class="artcard">
+      <h3>График работы</h3>
+      <p>
+        Ежедневно<br>
+        10:00 – 23:00
+      </p>
+    </article>
+
+  </section>
+
+  <!-- Карта (по желанию) -->
+  <section class="hero" style="padding:40px 20px">
+    <h2>Мы на карте</h2>
+    <p class="muted">Заезжайте или заказывайте доставку</p>
+
+    <!-- ВСТАВЬ СЮДА iframe из Google Maps -->
+    <!--
+    <iframe
+      src="https://www.google.com/maps/embed?pb=..."
+      width="100%"
+      height="300"
+      style="border:0; border-radius:14px;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+    -->
+  </section>
+
+</main>
+
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 2025 Sakura.mixx — суши и пицца рядом. Тел: +7 700 000 0000</p>
+    </div>
+  </footer>
+
+  <script src="./java.js"></script>
+  <button id="floatingCartBtn" class="floating-cart">
+  🛒 <span id="cartCount">0</span>
+</button>
+<aside id="cartPanel" class="cart-panel">
+  <div class="cart-head">
+    <h3>Корзина</h3>
+    <button id="closeCart" class="icon-btn">✕</button>
+  </div>
+
+  <div id="cartList" class="cart-list"></div>
+
+  <div class="cart-actions">
+    <div class="total">
+      Итого: <strong id="cartTotal">0</strong> ₸
+    </div>
+
+    <div class="cart-buttons">
+      <button id="clearCart" class="btn">Очистить</button>
+      <button id="checkout" class="btn primary">Оформить в WhatsApp</button>
+    </div>
+  </div>
+</aside>
+</body>
+</html>

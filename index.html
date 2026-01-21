@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SAKURA.MIX</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="log_div">
+       <img class="logo" src="./imges/Sakura.mixx_logo-removebg-preview.png" alt="">
+      <a class="brand" href="index.html">Sakura.mixx</a>
+        </div>
+
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="menu.html">Меню</a>
+        <a href="about.html" class="active">О нас</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+<div class="theme-toggle"></div>
+
+    </div>
+  </header>
+
+  <main class="wrap main">
+    <section class="hero">
+      <h1>Свежая пицца и суши рядом</h1>
+      <p class="muted"></p>
+      <p><a class="btn" href="menu.html">Посмотреть меню</a></p>
+    </section>
+
+    <section class="features">
+      <article class="artcard">
+        <h3>Быстро</h3>
+        <p>Готовим и выдаём за считанные минуты.</p>
+      </article>
+      <article class="artcard">
+        <h3>Вкусно</h3>
+        <p>Только свежие продукты и фирменные рецепты.</p>
+      </article>
+      <article class="artcard">
+        <h3>Удобно</h3>
+        <p>Оформление через WhatsApp в 2 клика.</p>
+      </article>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 2025 Sakura.mixx — суши и пицца рядом. Тел: +7 700 000 0000</p>
+    </div>
+  </footer>
+
+  <script src="./java.js"></script>
+  <button id="floatingCartBtn" class="floating-cart">
+  🛒 <span id="cartCount">0</span>
+</button>
+<aside id="cartPanel" class="cart-panel">
+  <div class="cart-head">
+    <h3>Корзина</h3>
+    <button id="closeCart" class="icon-btn">✕</button>
+  </div>
+
+  <div id="cartList" class="cart-list"></div>
+
+  <div class="cart-actions">
+    <div class="total">
+      Итого: <strong id="cartTotal">0</strong> ₸
+    </div>
+
+    <div class="cart-buttons">
+      <button id="clearCart" class="btn">Очистить</button>
+      <button id="checkout" class="btn primary">Оформить в WhatsApp</button>
+    </div>
+  </div>
+</aside>
+</body>
+</html>
