@@ -1,9 +1,3 @@
-
-
-
-
-
-
 /* ===============================
    НАСТРОЙКИ
 ================================ */
@@ -877,9 +871,15 @@ packBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     packBtns.forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
+
     selectedPack = p.packs[index];
+
+    // 🔥 ОБНОВЛЯЕМ ЦЕНУ В КНОПКЕ
+    addBtn.textContent = `Добавить • ${selectedPack.price} ₸`;
   });
 });
+
+
 
 addBtn.addEventListener("click", () => {
   // 1️⃣ если пакеты скрыты — показываем
