@@ -43,8 +43,9 @@ a {
 ------------------------------------ */
 header {
     width: 100%;
-    padding: 20px;
+    padding: 12px 16px;
     display: flex;
+    box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
@@ -60,8 +61,11 @@ header {
     color: var(--accent-color);
 }
 
-header {
-  padding: 12px 16px;
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px;
+  box-sizing: border-box;
 }
 
 .topbar-inner {
@@ -89,7 +93,8 @@ nav a {
 .log_div{
     display: flex;
     flex-wrap: wrap;
-    width: 100px;
+    gap: 8px;
+    align-items: center;
     text-align: center;
     justify-content: center;
 }
@@ -167,12 +172,16 @@ index cards */
 /* ===== NAV МЕНЮ ===== */
 .menu_nav {
   position: sticky;
-  top: 0;
+  top: 14px;
   z-index: 1001;
   background: var(--menu-bg);
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--border-color);
 }
+
+/* 🔥 ВАЖНО */
+.navmenu {
+  position: relative;
+}
+
 
 .navmenu {
   display: flex;
@@ -192,22 +201,23 @@ index cards */
   transition: 0.2s;
 }
 
-.navmenu a.active {
+/* .navmenu a.active {
   background: var(--accent-color);
   color: #fff;
-}
+} */
 
 
 /* линия-указатель */
 .nav-indicator {
   position: absolute;
+  bottom: 0;              /* ⬅ вместо margin-top */
+  left: 0;
   height: 3px;
-  width: 0;
   background: var(--accent-color);
   border-radius: 10px;
   transition: all 0.25s ease;
-  margin-top: 10px;
 }
+
 .menu_nav{
     padding: 20px;
     position: sticky;
@@ -233,27 +243,60 @@ index cards */
 .grid7,
 .grid8 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
   padding: 16px;
 }
 
 
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    padding: 40px;
+
+/* планшеты */
+@media (min-width: 600px) {
+  .grid,
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.menuh2{
-    margin-left: 200px;
+/* ноутбуки */
+@media (min-width: 900px) {
+  .grid,
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.menuh3{
-    margin-top: 50px;
-    margin-left: 220px;
+/* большие экраны */
+@media (min-width: 1200px) {
+  .grid,
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
+
+@media (max-width: 600px) {
+  .grid,
+  .grid2,
+  .grid3,
+  .grid4,
+  .grid5,
+  .grid6,
+  .grid7,
+  .grid8 {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+
+
+
+.menuh2,
+.menuh3 {
+    text-align: center;
+    margin: 24px 0;
+}
+
+
 
 .card {
     background: var(--card-bg);
@@ -261,9 +304,9 @@ index cards */
     border-radius: 14px;
     border: 1px solid var(--border-color);
     transition: 0.2s;
-    width: 200px;
-    margin: 5px;
+    box-sizing: border-box;
 }
+
 
 .card:hover {
     transform: translateY(-5px);
@@ -271,10 +314,12 @@ index cards */
 }
 
 .card img {
-    width: 180px;
-    height: 180px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 12px;
 }
+
 
 .card h3 {
     margin: 15px 0;
@@ -301,7 +346,7 @@ index cards */
 }
 
 .pack-btn {
-    margin: 5px;
+  margin: 2px;
   width: 40px;
   padding: 8px 14px;
   border-radius: 8px;
@@ -317,21 +362,23 @@ index cards */
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 
 .pack-select {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 8px;
 }
 
+
 .pack-btn {
-  flex: 1 1 48%;
+  padding: 6px 10px;
+  min-width: 48px;
+  width: auto;
   text-align: center;
 }
+
 
 /* ------------------------------------
    КОРЗИНА (SIDEBAR)
@@ -383,8 +430,9 @@ index cards */
 
 .cart-item-title {
     font-weight: 600;
-    padding: 200px;
+    padding: 0;
 }
+
 
 .checkout-btn {
     margin-top: 20px;
@@ -566,5 +614,20 @@ footer {
   .floating-cart {
     right: 16px;
     bottom: 16px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+
+  .topbar-inner {
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
   }
 }
