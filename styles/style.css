@@ -190,6 +190,8 @@ index cards */
   gap: 10px;
   justify-content: flex-start;
   -webkit-overflow-scrolling: touch;
+  align-items: center;
+  justify-content: center;
 }
 
 .navmenu::-webkit-scrollbar {
@@ -229,6 +231,7 @@ index cards */
     position: sticky;
     top: 14px;
     z-index: 1001; 
+    justify-content: center;
     background-color: var(--menu-bg) !important;
     color: var(--menu-text);
     backdrop-filter: none;
@@ -631,15 +634,9 @@ footer {
     flex-wrap: wrap;
   }
 
-   .nav-indicator {
-    bottom: 0;
-    margin-top: 0;
-  }
-   
   .nav {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
   }
 }
-
