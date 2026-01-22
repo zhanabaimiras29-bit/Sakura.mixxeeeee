@@ -530,7 +530,11 @@ index cards */
 }
 
 .cart-actions{
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+}
+
+.cart-buttons{
+  margin-top: 20px;
 }
 
 /* Скрытие кнопки корзины при открытой панели */
