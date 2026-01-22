@@ -1,3 +1,9 @@
+
+
+
+
+
+
 /* ===============================
    НАСТРОЙКИ
 ================================ */
@@ -1164,16 +1170,19 @@ document.addEventListener("DOMContentLoaded", () => {
   indicator.className = "nav-indicator";
   menu.appendChild(indicator);
 
-  function setActive(link) {
-    links.forEach(a => a.classList.remove("active"));
-    link.classList.add("active");
+function setActive(link) {
+  links.forEach(a => a.classList.remove("active"));
+  link.classList.add("active");
 
-    const rect = link.getBoundingClientRect();
-    const parentRect = menu.getBoundingClientRect();
+  const rect = link.getBoundingClientRect();
+  const menuRect = menu.getBoundingClientRect();
 
-    indicator.style.width = rect.width + "px";
-    indicator.style.left = rect.left - parentRect.left + "px";
-  }
+  const scrollLeft = menu.scrollLeft;
+
+  indicator.style.width = rect.width + "px";
+  indicator.style.left = rect.left - menuRect.left + scrollLeft + "px";
+}
+
 
   function onScroll() {
     const scrollPos = window.scrollY + 150;
@@ -1201,6 +1210,37 @@ document.addEventListener("DOMContentLoaded", () => {
   onScroll(); // старт
 });
 
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleGesture();
+});
+
+function handleGesture() {
+  const threshold = 50; // минимальное расстояние для свайпа
+  if (touchStartX - touchEndX > threshold) {
+    // Свайп влево
+    closeMenu();
+  } else if (touchEndX - touchStartX > threshold) {
+    // Свайп вправо
+    closeMenu();
+  }
+}
+
+function closeMenu() {
+  const panel = document.getElementById("cartPanel");
+  panel.classList.remove("open");
+  const btn = document.getElementById("floatingCartBtn");
+  if (btn) {
+    btn.classList.remove("hidden");
+  }
+}
 
 /* ===============================
    INIT
