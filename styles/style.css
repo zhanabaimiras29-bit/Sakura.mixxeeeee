@@ -158,7 +158,8 @@ index cards */
     border: 1px solid var(--border-color);
     transition: 0.2s;
     width: 100%;
-    margin: 5px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -191,7 +192,6 @@ index cards */
   justify-content: flex-start;
   -webkit-overflow-scrolling: touch;
   align-items: center;
-  justify-content: center;
 }
 
 .navmenu::-webkit-scrollbar {
@@ -259,42 +259,7 @@ index cards */
 
 
 
-/* планшеты */
-@media (min-width: 600px) {
-  .grid,
-  .menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-/* ноутбуки */
-@media (min-width: 900px) {
-  .grid,
-  .menu-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* большие экраны */
-@media (min-width: 1200px) {
-  .grid,
-  .menu-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .grid,
-  .grid2,
-  .grid3,
-  .grid4,
-  .grid5,
-  .grid6,
-  .grid7,
-  .grid8 {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  }
-}
 
 
 
@@ -588,6 +553,11 @@ footer {
    АДАПТИВ
 ------------------------------------ */
 @media (max-width: 600px) {
+  .card {
+    width: 100%;
+    padding: 14px;
+  }
+
     header {
         flex-wrap: wrap;
         text-align: center;
@@ -597,12 +567,6 @@ footer {
         width: 100%;
         margin-top: 10px;
     }
-}
-@media (max-width: 600px) {
-  .card {
-    width: 100%;
-    padding: 14px;
-  }
 
   .card img {
     width: 100%;
@@ -624,9 +588,8 @@ footer {
     right: 16px;
     bottom: 16px;
   }
-}
-@media (max-width: 600px) {
-  header {
+
+    header {
     padding: 10px;
   }
 
@@ -638,5 +601,46 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+  }
+
+    .grid,
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid,
+  .grid2,
+  .grid3,
+  .grid4,
+  .grid5,
+  .grid6,
+  .grid7,
+  .grid8 {
+    grid-template-columns: repeat(2, 1fr); /* 🔥 2 карточки */
+  }
+
+    .nav_a {
+    padding: 8px 12px;
+  }
+}
+
+
+
+
+
+
+/* ноутбуки */
+@media (min-width: 900px) {
+  .grid,
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* большие экраны */
+@media (min-width: 1200px) {
+  .grid,
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
